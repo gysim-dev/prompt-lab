@@ -9,8 +9,8 @@ import {
   ExternalLink,
   FlaskConical,
   Info,
+  Instagram,
   RotateCcw,
-  ShieldCheck,
   Sparkles,
   WandSparkles,
 } from 'lucide-react'
@@ -197,11 +197,17 @@ export default function App() {
               브랜드 카피 프롬프트 스튜디오
             </span>
           </div>
-
-          <span className="flex items-center gap-1.5 text-xs text-slate-500">
-            <ShieldCheck size={15} className="text-teal-600" />
-            로컬에서만 처리
-          </span>
+          
+          <a href="https://www.instagram.com/perfor_meow/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram @perfor_meow 프로필 방문"
+            className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-teal-600">
+            
+            <Instagram size={16} />
+            <span>@perfor_meow</span>
+            <ExternalLink size={12} />
+          </a>
 
         </div>
       </header>
