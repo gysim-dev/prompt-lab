@@ -36,8 +36,8 @@ const tones = [
 ]
 
 const channels: Channel[] = [
-  '메타 광고',
-  '인스타그램',
+  '메타/인스타그램',
+  '검색광고',
   '상세페이지',
   'CRM',
 ]
