@@ -234,8 +234,8 @@ export default function App() {
           </h1>
 
           <p className="mt-5 text-slate-500 leading-7 max-w-2xl">
-            브랜드 가이드와 캠페인 목표를 입력하면,
-            채널에 맞는 AI 카피라이팅 프롬프트를 즉시 완성합니다.
+            브랜드 가이드와 캠페인 목표를 입력하면,<br />
+            채널에 맞는 AI 카피라이팅 프롬프트를 즉시 완성합니다.<br />
             별도 가입 없이 무료로 이용하세요.
           </p>
 
