@@ -1,2 +1,326 @@
+
+/* ============================================================
+   PROMPT LAB
+   Global Stylesheet
+
+   01. Tailwind & Global
+   02. Transitions
+   03. Panel
+   04. Step Badge
+   05. Form Fields
+   06. Choice & Framework
+   07. Action Buttons
+   08. Prompt Result
+   09. Responsive
+   ============================================================ */
+
+
+/* ============================================================
+   01. Tailwind & Global
+   ============================================================ */
+
 @import "tailwindcss";
-:root{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI","Noto Sans KR",sans-serif;color:#0f172a;background:#f8fafc;font-synthesis:none}*{box-sizing:border-box}button,a,select{transition:all .15s ease}button{cursor:pointer}.panel{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:28px;box-shadow:0 5px 25px #0f172a05}.step{display:inline-flex;align-items:center;justify-content:center;border-radius:7px;background:#ccfbf1;color:#0f766e;font-size:11px;font-weight:800;min-width:28px;height:28px}.field{display:block;width:100%;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;background:#fff;color:#0f172a;font-size:14px;outline:none}.field:focus{border-color:#0d9488;box-shadow:0 0 0 3px #ccfbf1}.field::placeholder{color:#94a3b8}.choice,.framework{border:1px solid #e2e8f0;border-radius:10px;background:#fff;text-align:left;color:#334155}.choice{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:12px 14px;font-size:13px;font-weight:600}.framework{padding:17px}.selected{background:#f0fdfa;border-color:#0d9488;color:#0f766e}.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;text-decoration:none}.primary{background:#0d9488;color:white}.primary:hover{background:#0f766e}.secondary{background:white;color:#475569;border:1px solid #e2e8f0}.secondary:hover{background:#f8fafc}.result{border:1px solid #d5e6e4;background:#f8fdfc;border-radius:12px;padding:22px;max-height:560px;overflow:auto}@media(max-width:640px){.panel{padding:20px}.primary,.secondary{width:100%}}
+
+:root {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Noto Sans KR",
+    sans-serif;
+
+  color: #0f172a;
+  background: #f8fafc;
+
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   02. Transitions
+   ============================================================ */
+
+button,
+a,
+select {
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+}
+
+
+/* ============================================================
+   03. Panel
+   - 브랜드 가이드
+   - 캠페인 설정
+   - 프레임워크
+   - 프롬프트 결과
+   ============================================================ */
+
+.panel {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  padding: 28px;
+
+  box-shadow: 0 5px 25px #0f172a05;
+}
+
+
+/* ============================================================
+   04. Step Badge
+   - 섹션 번호 01 ~ 04
+   ============================================================ */
+
+.step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 28px;
+  height: 28px;
+
+  border-radius: 7px;
+
+  background: #ccfbf1;
+  color: #0f766e;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   05. Form Fields
+   - input
+   - textarea
+   - select
+   ============================================================ */
+
+.field {
+  display: block;
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #0f172a;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.field::placeholder {
+  color: #94a3b8;
+}
+
+.field:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px #ccfbf1;
+}
+
+
+/* ============================================================
+   06. Choice & Framework
+   - 마케팅 채널 선택
+   - AIDA / PAS / FAB 선택
+   ============================================================ */
+
+/* 공통 선택 카드 */
+
+.choice,
+.framework {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #334155;
+
+  text-align: left;
+}
+
+/* 마케팅 채널 */
+
+.choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 6px;
+  padding: 12px 14px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 카피라이팅 프레임워크 */
+
+.framework {
+  padding: 17px;
+}
+
+/* 선택된 상태 */
+
+.selected {
+  background: #f0fdfa;
+  border-color: #0d9488;
+  color: #0f766e;
+}
+
+/* 마우스 호버 */
+
+.choice:not(.selected):hover,
+.framework:not(.selected):hover {
+  border-color: #99f6e4;
+  background: #f8fdfc;
+}
+
+/* 키보드 접근성 */
+
+.choice:focus-visible,
+.framework:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+   07. Action Buttons
+   - 프롬프트 생성
+   - 입력값 초기화
+   - 프롬프트 복사
+   - ChatGPT 열기
+   ============================================================ */
+
+/* 공통 버튼 */
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Primary */
+
+.primary {
+  background: #0d9488;
+  color: #ffffff;
+}
+
+.primary:hover {
+  background: #0f766e;
+}
+
+/* Secondary */
+
+.secondary {
+  background: #ffffff;
+  color: #475569;
+
+  border: 1px solid #e2e8f0;
+}
+
+.secondary:hover {
+  background: #f8fafc;
+}
+
+/* 키보드 접근성 */
+
+.primary:focus-visible,
+.secondary:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 3px;
+}
+
+/* 비활성화 상태 */
+
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.primary:disabled:hover {
+  background: #0d9488;
+}
+
+.secondary:disabled:hover {
+  background: #ffffff;
+}
+
+
+/* ============================================================
+   08. Prompt Result
+   - 생성된 프롬프트 출력 영역
+   ============================================================ */
+
+.result {
+  padding: 22px;
+
+  border: 1px solid #d5e6e4;
+  border-radius: 12px;
+
+  background: #f8fdfc;
+
+  max-height: 560px;
+  overflow: auto;
+}
+
+
+/* ============================================================
+   09. Responsive
+   - 모바일 640px 이하
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 20px;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+}
+
+
+/* ============================================================
+   10. Reduced Motion
+   - 사용자의 애니메이션 최소화 설정 존중
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  button,
+  a,
+  select {
+    transition: none;
+  }
+}
