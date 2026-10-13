@@ -180,18 +180,24 @@ export default function App() {
       {/* ======================================================
           HEADER
       ====================================================== */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="site-header-inner mx-auto flex max-w-6xl items-center justify-between gap-6 px-5">
+
+      {/* HEADER */}
+      <header className="header">
+        <div className="shell header-inner">
           
           {/* 로고 */}
-          <a
-            href="/"
-            className="flex shrink-0 items-center gap-2 font-extrabold"
-            >
-            PROMPT <span className="text-teal-600">LAB</span>
+          <a className="brand" href="/">
+            <span className="brand-icon">
+              <WandSparkles size={21} />
+            </span>
+
+
+            <span>
+              PROMPT <strong>LAB</strong>     
+            </span>
           </a>
-          
-          {/* 네비게이션 */}
+
+          {/* 공통 네비게이션 */}
           <nav className="header-nav" aria-label="주요 서비스">
             <a
               href="/"
@@ -200,27 +206,29 @@ export default function App() {
               >
               프롬프트 생성기
             </a>
-            
+
             <a href="/ad-calculator/">
               DB 광고 성과 시뮬레이터
             </a>
-          
           </nav>
-          
+
+
           {/* 인스타그램 */}
-          <a
+
+          <a      
+            className="social"
             href="https://www.instagram.com/perfor_meow/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram @perfor_meow 프로필 방문"
-            className="flex shrink-0 items-center gap-1.5 text-xs text-slate-500 hover:text-teal-600"
             >
-            <Instagram size={16} />
-            <span className="hidden sm:inline">@perfor_meow</span>
-            <ExternalLink size={12} />
+            <Instagram size={17} />
+            <span>@perfor_meow</span>
           </a>
+
         </div>
       </header>
+
 
       <main className="mx-auto max-w-6xl px-5 pb-24">
 
