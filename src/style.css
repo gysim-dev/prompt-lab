@@ -327,9 +327,58 @@ select {
 
 
 /* ============================================================
-   11. Header Navigation
-   - PROMPT LAB / DB 광고 성과 시뮬레이터 공통 메뉴
+   Header - AD CALCULATOR와 동일한 디자인
    ============================================================ */
+
+.shell {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.header {
+  min-height: 74px;
+  background: #fff;
+  border-bottom: 1px solid #e9edf3;
+}
+
+.header-inner {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* 로고 */
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 11px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.brand strong {
+  color: #0c9488;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #0c9488;
+  color: #fff;
+}
+
+/* 네비게이션 */
 
 .header-nav {
   display: flex;
@@ -343,19 +392,13 @@ select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 10px 14px;
   border-radius: 8px;
-
   color: #64748b;
   font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
   text-decoration: none;
-
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
 }
 
 .header-nav a:hover {
@@ -370,21 +413,40 @@ select {
   font-weight: 700;
 }
 
-.header-nav a:focus-visible {
+/* 인스타그램 */
+
+.social {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 8px;
+  color: #64748b;
+  font-size: 12px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.social:hover {
+  color: #0c9488;
+}
+
+/* 키보드 접근성 */
+
+.brand:focus-visible,
+.header-nav a:focus-visible,
+.social:focus-visible {
   outline: 2px solid #0c9488;
   outline-offset: 3px;
 }
 
-/* ============================================================
-   12. Header Responsive
-   ============================================================ */
+/* 태블릿 */
 
 @media (max-width: 900px) {
-  .site-header-inner {
+  .header-inner {
     flex-wrap: wrap;
     gap: 8px 16px;
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 10px;
   }
 
   .header-nav {
@@ -394,7 +456,27 @@ select {
   }
 }
 
+/* 모바일 */
+
 @media (max-width: 560px) {
+  .shell {
+    padding: 0 17px;
+  }
+
+  .brand {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social {
+    font-size: 11px;
+  }
+
   .header-nav {
     gap: 4px;
   }
@@ -404,4 +486,3 @@ select {
     font-size: 12px;
   }
 }
-
