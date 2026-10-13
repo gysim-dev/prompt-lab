@@ -184,8 +184,7 @@ export default function App() {
     <div className="mx-auto max-w-6xl px-5 min-h-18 flex flex-wrap items-center justify-between gap-4 py-3">
 
       {/* 로고 */}
-      <a
-        href="https://www.prompt-lab.shop/"
+      <a href="https://www.prompt-lab.shop/"
         className="flex items-center gap-3"
       >
         <div className="rounded-xl bg-teal-600 p-2 text-white">
@@ -202,18 +201,15 @@ export default function App() {
         aria-label="주요 서비스"
         className="flex items-center gap-5"
       >
-        <a
-        href="https://www.prompt-lab.shop/"
-        className="text-sm font-semibold text-teal-700"
-        >
-        프롬프트 생성기
-        </a>
+      <a href="https://www.prompt-lab.shop/"
+        className="text-sm font-semibold text-teal-700">
+      프롬프트 생성기
+      </a>
 
-        <a
-          href="https://gysim-dev.github.io/ad-calculator/"
+        <a href="/ad-calculator/"
           className="text-sm text-slate-600 hover:text-teal-600"
-        >
-          광고 성과 계산기
+          >
+          DB 광고 성과 시뮬레이터
         </a>
       </nav>
 
