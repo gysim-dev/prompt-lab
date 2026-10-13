@@ -324,3 +324,84 @@ select {
     transition: none;
   }
 }
+
+
+/* ============================================================
+   11. Header Navigation
+   - PROMPT LAB / DB 광고 성과 시뮬레이터 공통 메뉴
+   ============================================================ */
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  border-radius: 8px;
+
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.header-nav a:hover {
+  background: #f0f9f7;
+  color: #0c9488;
+}
+
+.header-nav a.active,
+.header-nav a[aria-current="page"] {
+  background: #e6f7f3;
+  color: #087f76;
+  font-weight: 700;
+}
+
+.header-nav a:focus-visible {
+  outline: 2px solid #0c9488;
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   12. Header Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .site-header-inner {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .header-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .header-nav {
+    gap: 4px;
+  }
+
+  .header-nav a {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+}
+
