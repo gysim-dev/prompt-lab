@@ -18,21 +18,41 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      # 1. 저장소 불러오기
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 2. Node.js 설정
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install dependencies
+      # 3. 기존 PROMPT LAB 빌드
+      - name: Install PROMPT LAB dependencies
         run: npm install
 
-      - name: Build
+      - name: Build PROMPT LAB
         run: npm run build
 
+      # 4. DB 광고 성과 시뮬레이터 빌드
+      - name: Install calculator dependencies
+        working-directory: ad-calculator
+        run: npm install
+
+      - name: Build calculator
+        working-directory: ad-calculator
+        run: npm run build
+
+      # 5. 빌드 결과물 통합
+      - name: Merge calculator into PROMPT LAB
+        run: |
+          mkdir -p dist/ad-calculator
+          cp -R ad-calculator/dist/. dist/ad-calculator/
+
+      # 6. GitHub Pages 업로드
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -42,8 +62,10 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     needs: build
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
