@@ -182,42 +182,43 @@ export default function App() {
       ====================================================== */}
       <header className="border-b border-slate-200 bg-white">
         <div className="site-header-inner mx-auto flex max-w-6xl items-center justify-between gap-6 px-5">
-
-    {/* 로고 */}
-    <a
-      href="/"
-      className="flex shrink-0 items-center gap-2 font-extrabold"
-    >
-      PROMPT <span className="text-teal-600">LAB</span>
-    </a>
-
-    {/* 네비게이션 */}
-    <nav className="header-nav" aria-label="주요 서비스">
-      <a
-        href="/"
-        className="active"
-        aria-current="page"
-      >
-        프롬프트 생성기
-      </a>
-
-      <a href="/ad-calculator/">
-        DB 광고 성과 시뮬레이터
-      </a>
-    </nav>
-
-    {/* 인스타그램 */}
-    <a
-      href="https://www.instagram.com/perfor_meow/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="shrink-0 text-sm text-slate-500 hover:text-teal-600"
-    >
-      @perfor_meow
-    </a>
-
-  </div>
-</header>
+          
+          {/* 로고 */}
+          <a
+            href="/"
+            className="flex shrink-0 items-center gap-2 font-extrabold"
+            >
+            PROMPT <span className="text-teal-600">LAB</span>
+          </a>
+          
+          {/* 네비게이션 */}
+          <nav className="header-nav" aria-label="주요 서비스">
+            <a
+              href="/"
+              className="active"
+              aria-current="page"
+              >
+              프롬프트 생성기
+            </a>
+            
+            <a href="/ad-calculator/">
+              DB 광고 성과 시뮬레이터
+            </a>
+          
+          </nav>
+          
+          {/* 인스타그램 */}
+          <a
+            href="https://www.instagram.com/perfor_meow/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 text-sm text-slate-500 hover:text-teal-600"
+            >
+            @perfor_meow
+          </a>
+        
+        </div>
+      </header>
   
       {/* 메뉴 */}
       <nav
