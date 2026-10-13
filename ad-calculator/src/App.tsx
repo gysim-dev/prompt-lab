@@ -81,10 +81,50 @@ export default function App() {
   }
 
   return <div className="site">
-    <header className="header"><div className="shell header-inner">
-      <a className="brand" href="#top"><span className="brand-icon"><BarChart3 size={21} /></span><span>AD <strong>CALCULATOR</strong></span></a>
-      <a className="social" href="https://www.instagram.com/perfor_meow/" target="_blank" rel="noopener noreferrer"><Instagram size={17} /><span>@perfor_meow</span></a>
-    </div></header>
+
+    
+
+<header className="header">
+  <div className="shell header-inner">
+
+    {/* 로고 - 클릭하면 계산기 홈 */}
+    <a className="brand" href="/ad-calculator/">
+      <span className="brand-icon">
+        <BarChart3 size={21} />
+      </span>
+      <span>
+        AD <strong>CALCULATOR</strong>
+      </span>
+    </a>
+
+    {/* 사이트 네비게이션 */}
+    <nav className="header-nav" aria-label="주요 서비스">
+      <a href="/">
+        프롬프트 생성기
+      </a>
+
+      <a
+        href="/ad-calculator/"
+        className="active"
+        aria-current="page"
+      >
+        DB 광고 성과 시뮬레이터
+      </a>
+    </nav>
+
+    {/* 인스타그램 */}
+    <a
+      className="social"
+      href="https://www.instagram.com/perfor_meow/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Instagram size={17} />
+      <span>@perfor_meow</span>
+    </a>
+
+  </div>
+</header>
 
     <main id="top" className="shell">
       <div className="hero"><div className="eyebrow"><Activity size={14} /> MARKETING PERFORMANCE TOOL</div><h1>DB 광고 성과 <span>시뮬레이터</span></h1><p>노출량, 광고비, CTR, CVR을 조정해 예상 DB 전환수와 CPA를 계산하고 목표 달성 조건을 역산해 보세요.</p></div>
