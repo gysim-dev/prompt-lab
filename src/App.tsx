@@ -180,37 +180,58 @@ export default function App() {
       {/* ======================================================
           HEADER
       ====================================================== */}
+  <header className="border-b border-slate-200 bg-white">
+    <div className="mx-auto max-w-6xl px-5 min-h-18 flex flex-wrap items-center justify-between gap-4 py-3">
 
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-5 h-18 flex items-center justify-between">
-
-          <div className="flex items-center gap-3">
-            <div className="rounded-xl bg-teal-600 p-2 text-white">
-              <FlaskConical size={21} />
-            </div>
-
-            <span className="text-lg font-extrabold tracking-tight">
-              PROMPT <span className="text-teal-600">LAB</span>
-            </span>
-
-            <span className="hidden sm:inline text-xs text-slate-400 border-l pl-3 ml-1">
-              브랜드 카피 프롬프트 스튜디오
-            </span>
-          </div>
-          
-          <a href="https://www.instagram.com/perfor_meow/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram @perfor_meow 프로필 방문"
-            className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-teal-600">
-            
-            <Instagram size={16} />
-            <span>@perfor_meow</span>
-            <ExternalLink size={12} />
-          </a>
-
+      {/* 로고 */}
+      <a
+        href="https://www.prompt-lab.shop/"
+        className="flex items-center gap-3"
+      >
+        <div className="rounded-xl bg-teal-600 p-2 text-white">
+          <FlaskConical size={21} />
         </div>
-      </header>
+
+        <span className="text-lg font-extrabold tracking-tight">
+          PROMPT <span className="text-teal-600">LAB</span>
+        </span>
+      </a>
+  
+      {/* 메뉴 */}
+      <nav
+        aria-label="주요 서비스"
+        className="flex items-center gap-5"
+      >
+        <a
+        href="https://www.prompt-lab.shop/"
+        className="text-sm font-semibold text-teal-700"
+        >
+        프롬프트 생성기
+        </a>
+
+        <a
+          href="https://gysim-dev.github.io/ad-calculator/"
+          className="text-sm text-slate-600 hover:text-teal-600"
+        >
+          광고 성과 계산기
+        </a>
+      </nav>
+
+      {/* 인스타그램 */}
+      <a
+        href="https://www.instagram.com/perfor_meow/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram @perfor_meow 프로필 방문"
+        className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-teal-600"
+      >
+        <Instagram size={16} />
+        <span className="hidden sm:inline">@perfor_meow</span>
+        <ExternalLink size={12} />
+      </a>
+
+    </div>
+  </header>
 
       <main className="mx-auto max-w-6xl px-5 pb-24">
 
