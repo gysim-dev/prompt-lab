@@ -212,46 +212,15 @@ export default function App() {
             href="https://www.instagram.com/perfor_meow/"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 text-sm text-slate-500 hover:text-teal-600"
+            aria-label="Instagram @perfor_meow 프로필 방문"
+            className="flex shrink-0 items-center gap-1.5 text-xs text-slate-500 hover:text-teal-600"
             >
-            @perfor_meow
+            <Instagram size={16} />
+            <span className="hidden sm:inline">@perfor_meow</span>
+            <ExternalLink size={12} />
           </a>
-        
         </div>
       </header>
-  
-      {/* 메뉴 */}
-      <nav
-        aria-label="주요 서비스"
-        className="flex items-center gap-5"
-      >
-      <a href="https://www.prompt-lab.shop/"
-        className="text-sm font-semibold text-teal-700">
-      프롬프트 생성기
-      </a>
-
-        <a href="/ad-calculator/"
-          className="text-sm text-slate-600 hover:text-teal-600"
-          >
-          DB 광고 성과 시뮬레이터
-        </a>
-      </nav>
-
-      {/* 인스타그램 */}
-      <a
-        href="https://www.instagram.com/perfor_meow/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram @perfor_meow 프로필 방문"
-        className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-teal-600"
-      >
-        <Instagram size={16} />
-        <span className="hidden sm:inline">@perfor_meow</span>
-        <ExternalLink size={12} />
-      </a>
-
-    </div>
-  </header>
 
       <main className="mx-auto max-w-6xl px-5 pb-24">
 
